@@ -26,7 +26,7 @@ export default {
   },
   mounted() {
     // this.$parent.panes.push(this.$slots.default);
-    console.log(this.$parent.data());
+    // console.log(this.$parent.$data);
   },
   render() {
     let className = {

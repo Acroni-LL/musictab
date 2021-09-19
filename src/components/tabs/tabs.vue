@@ -20,6 +20,7 @@ export default {
     onChangeIndex(index) {
       // console.log(index);
       this.$emit("changeTab", index);
+      console.log(this.$data);
     },
   },
   components: {
