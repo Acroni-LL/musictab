@@ -20,7 +20,7 @@ export default {
   name: "App",
   data() {
     return {
-      currentIndex: "1",
+      currentIndex: "2",
     };
   },
   components: {},
