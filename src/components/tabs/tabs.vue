@@ -4,23 +4,21 @@ import Content from "./content.vue";
 
 export default {
   name: "Tabs",
-
+  data() {
+    return {
+      panes: [],
+    };
+  },
   props: {
     currentIndex: {
       type: [String, Number],
       default: "1",
-    },
-    data() {
-      return {
-        panes: [1, 1, 2],
-      };
     },
   },
   methods: {
     onChangeIndex(index) {
       // console.log(index);
       this.$emit("changeTab", index);
-      console.log(this.$data);
     },
   },
   components: {
@@ -30,7 +28,7 @@ export default {
     return (
       <div>
         <ul class="tabs-header">{this.$slots.default}</ul>
-        <Content />
+        <Content panes={this.panes} />
       </div>
     );
   },

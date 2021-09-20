@@ -12,6 +12,10 @@ export default {
       default: "tab",
     },
   },
+  mounted() {
+    this.$parent.panes.push(this);
+    // console.log(this.$parent.panes);
+  },
   computed: {
     active() {
       return this.$parent.currentIndex == this.index;
@@ -19,14 +23,8 @@ export default {
   },
   methods: {
     changeIndexHandler() {
-      // this.$emit("onChangeIndex", this.index);
       this.$parent.onChangeIndex(this.index);
-      // console.log(this.index);
     },
-  },
-  mounted() {
-    // this.$parent.panes.push(this.$slots.default);
-    // console.log(this.$parent.$data);
   },
   render() {
     let className = {
