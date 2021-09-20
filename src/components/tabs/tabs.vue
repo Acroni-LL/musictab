@@ -1,4 +1,3 @@
-
 <script>
 import Content from "./content.vue";
 
@@ -17,12 +16,8 @@ export default {
   },
   methods: {
     onChangeIndex(index) {
-      // console.log(index);
-      this.$emit("changeTab", index);
+      this.$emit("changTab", index);
     },
-  },
-  components: {
-    Content,
   },
   render() {
     return (

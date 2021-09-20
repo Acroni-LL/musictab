@@ -1,11 +1,16 @@
 <template>
   <div id="app">
-    <tabs :currentIndex="currentIndex" @changeTab="changeTabHandler">
+    <Hello />
+    <tabs :currentIndex="currentIndex" @changTab="changeTabHandler">
       <tab tabName="tab1" index="1">
         <div>内容1</div>
       </tab>
-      <tab tabName="tab2" index="2"> <div>内容2</div></tab>
-      <tab tabName="tab3" index="3"><h3>内容3</h3></tab>
+      <tab tabName="tab2" index="2">
+        <div>内容2</div>
+      </tab>
+      <tab tabName="tab3" index="3">
+        <h3>内容3</h3>
+      </tab>
     </tabs>
   </div>
 </template>

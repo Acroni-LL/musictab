@@ -1,9 +1,3 @@
-<template>
-  <div>
-    <!-- <div v-for="(item, index)in panes">{{ item }}</div> -->
-  </div>
-</template>
-
 <script>
 export default {
   name: "Content",
@@ -24,11 +18,9 @@ export default {
       </div>
     );
   },
-  mounted() {
-    console.log(this.panes);
-  },
 };
 </script>
 
-<style>
+<style scoped>
 </style>
+

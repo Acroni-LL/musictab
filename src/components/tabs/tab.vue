@@ -1,4 +1,3 @@
-
 <script>
 export default {
   name: "Tab",
@@ -14,7 +13,7 @@ export default {
   },
   mounted() {
     this.$parent.panes.push(this);
-    // console.log(this.$parent.panes);
+    console.log(this.$parent.panes);
   },
   computed: {
     active() {
@@ -23,7 +22,10 @@ export default {
   },
   methods: {
     changeIndexHandler() {
+      // 把数据传递给父元素
+      // this.$emit("onChangeIndex",this.index);
       this.$parent.onChangeIndex(this.index);
+      console.log(this.$slots.default);
     },
   },
   render() {
@@ -39,7 +41,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 .tab {
   flex: 1;
@@ -49,7 +50,9 @@ export default {
   position: relative;
   text-align: center;
 }
+
 .tab.active {
   border-bottom: 2px solid blue;
 }
 </style>
+
